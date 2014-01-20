@@ -100,6 +100,7 @@ enum {
     ACONFIGURATION_SCREEN_SIZE = 0x0200,
     ACONFIGURATION_VERSION = 0x0400,
     ACONFIGURATION_SCREEN_LAYOUT = 0x0800,
+    ACONFIGURATION_UI_THEME_MODE = 0x0900,
     ACONFIGURATION_UI_MODE = 0x1000,
 };
 
@@ -272,6 +273,15 @@ int32_t AConfiguration_getScreenLong(AConfiguration* config);
 void AConfiguration_setScreenLong(AConfiguration* config, int32_t screenLong);
 
 /**
+ * Return the current ACONFIGURATION_UI_THEME_MODE_* set in the configuration.	
+ */	
+  int32_t AConfiguration_getUiThemeMode(AConfiguration* config);
+ /**
+ * Set the current theme UI mode in the configuration.	
+ */
+ void AConfiguration_setUiThemeMode(AConfiguration* config, int32_t uiThemeMode);
+
+/** 
  * Return the current ACONFIGURATION_UI_MODE_TYPE_* set in the configuration.
  */
 int32_t AConfiguration_getUiModeType(AConfiguration* config);
